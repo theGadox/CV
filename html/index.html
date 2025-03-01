@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- BARRA DE NAVEGACION -->
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="#" id="me" class="activated" onclick="change_status(1)">Acerca de mi</a></li>
+                <li><a href="#" id="exp" onclick="change_status(2)">Experiencia previa</a></li>
+                <li><a href="#" id="inf" onclick="change_status(3)">Educación</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    <div id="content">
+        
+        <div id="change_watch_mode">
+            
+            <button onclick="change_view()" id="cv_button">
+                <!-- 
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 12">
+                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                </svg>
+                -->
+                </i>Modo CV
+            </button>
+            
+            <button onclick="downloadPDF()" id="dowload_pdf_button" class="hidden">Descargar como PDF</button>
+        </div>
+    
+    
+        <!-- Información sobre mí -->
+        <div id="presentacion">
+            <div id="contenido">
+                <img src="../images/Yo_2.jpeg" alt="Foto de perfil" id="foto-perfil">
+                <div id="texto">
+                    <h2>Gadi Alesser Rebolledo Mancilla</h2>
+                    <p>Valparaíso, Región de Valparaíso, Chile</p>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+
+        <br>
+    
+        <!-- Descripcion y metas  -->
+        <div id="about_me">
+            <h2>ACERCA DE MI</h2>
+            <div class="experience">
+                <p>
+                    Ingeniero en Ejecución en Informática con experiencia en desarrollo utilizando Python, Java, JavaScript, jQuery y SQL. 
+                    Habilidad para trabajar con tecnologías como React y PostgreSQL. 
+                    Apasionado por la resolución de problemas y el aprendizaje continuo. 
+                    Valoro el trabajo en equipo y tengo conocimientos de metodologías ágiles como Scrum. 
+                    Me motiva enfrentar nuevos desafíos y buscar soluciones innovadoras.
+                </p>
+            </div>
+            <br>
+        </div>
+    
+    
+        <!-- Experiencia previoa, fechas y actividades -->
+        <div id="previous_experience" class="hidden">
+            <h2>EXPERIENCIA PREVIA</h2>
+            
+            
+            <!-- Experiencia 1 -->
+            <div class="experience-section experience">
+                <div class="company-name">Enjoy S.A</div>
+                <div class="date-range">junio 2024 - noviembre 2024 · 6 meses (Proveedor) </div>
+                <div class="job-description">
+                    <p>
+                        Desarrollé diversos formularios con Django, Python y Java para optimizar procesos dentro de la compañía, 
+                        reduciendo la cantidad de acciones necesarias para obtener resultados. 
+                        Implementé medidas de seguridad y validaciones correspondientes para garantizar un uso eficiente y seguro. 
+                        Utilicé SQL Management para la gestión de bases de datos y trabajé en entornos como Visual Studio Code y Eclipse. Además, 
+                        gestioné el control de versiones mediante Bitbucket para el manejo de archivos y colaboración en el código.
+                    </p>
+
+                    <!-- End Bóton Ver más -->
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">Java</span>
+                    <span class="skill-badge">Jquery</span>
+
+                    <span class="skill-badge">Django</span>
+                    <span class="skill-badge">SQL Managment</span>
+                    <span class="skill-badge">Bitbucket</span>
+
+                    
+                    <!-- Más habilidades -->
+                    <!--
+                    <div class ="mt-1">
+                        <span class="skill-badge-soft">Análisis Predictivo</span>
+                        <span class="skill-badge-soft">Reconocimiento de patrones</span>
+                        <span class="skill-badge-soft">Ingeniería de Datos</span>
+                        <span class="skill-badge-soft">Análisis de Datos</span>
+                    </div>
+                    -->
+                    <p>Viña del mar, Chile</p>
+                </div>
+            </div>
+
+            <br>
+
+
+            <!-- Experiencia 2 -->
+            <div class="experience-section experience">
+                <div class="company-name">Enjoy S.A</div>
+                <div class="date-range">enero 2024 - febrero 2024 · 2 meses (Practica) </div>
+                <div class="job-description">
+                    <p>
+                        Durante mi practica, me encargué de la automatización de reportes de ventas web, facilitando su traspaso a Excel. 
+                        Validé pagos y estados utilizando información de Transbank, integrando estos procesos a otros sistemas para mejorar la eficiencia. 
+                        Además, optimicé la interfaz de la aplicación móvil y web para ofrecer información más completa a los usuarios.
+                        También desarrollé Stored Procedures para mejorar el rendimiento de las consultas en la base de datos. 
+                    </p>
+
+                    <!-- End Bóton Ver más -->
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">Java</span>
+                    <span class="skill-badge">Jquery</span>
+
+                    <span class="skill-badge">Angular</span>
+                    <span class="skill-badge">SQL Managment</span>
+
+
+                    
+                    <!-- Más habilidades -->
+                    <!--  
+                    <div class ="mt-1">
+                        <span class="skill-badge-soft">Análisis Predictivo</span>
+                        <span class="skill-badge-soft">Reconocimiento de patrones</span>
+                        <span class="skill-badge-soft">Ingeniería de Datos</span>
+                        <span class="skill-badge-soft">Análisis de Datos</span>
+                    </div>
+                    -->
+
+                    <p>Viña del mar, Chile</p>
+                </div>
+            </div>
+
+            <br>
+
+        </div>
+    
+    
+        <!-- Educación -->
+        <div id="educacion" class="hidden">
+            <h2>EDUCACIÓN</h2>
+
+            <div class="list-group-item">
+                <div class="container-logo">
+                    <img src="../images/Pucv.png" alt="Logo" class="logo">
+                </div>
+                <div class="container-description-edu">
+                    <h3>Pontificia Universidad Católica de Valparaíso</h3>
+                    <p class="mb-1">Grado , Ingeniero de ejecución en informática</p>
+                    <small>2021-2024</small>
+                    <!--
+                    <div class="col-md-10">
+                        <span class="skill-badge">VBA</span>
+                        <span class="skill-badge">BPMN BIZAGI</span>
+                        <span class="skill-badge">SQL</span>
+                    </div>
+                    -->
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <a target="_blank" href="https://github.com/theGadox" class="footer-icon">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                </svg>
+            
+            </a>
+    
+            <a target="_blank" href="https://www.linkedin.com/in/gadirebolledom/" class="footer-icon">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                </svg>
+            
+            </a>
+    
+            <span class="footer-email">
+                Email: <a href="mailto:gadi.rebolledom@gmail.com" target="_blank">gadi.rebolledom@gmail.com</a>
+            </span>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
