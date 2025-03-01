@@ -1,10 +1,6 @@
 function change_status(num) {
-    
-
-
     $("#me, #exp, #inf").removeClass("activated");
     $("#about_me, #previous_experience, #educacion").addClass("hidden");
-
 
     if (num === 1) {
         $("#me").addClass("activated");
@@ -15,27 +11,17 @@ function change_status(num) {
     } else if (num === 3) {
         $("#inf").addClass("activated");
         $("#educacion").removeClass("hidden");
-    } else {
-        console.log("Número fuera de rango");
     }
 }
 
 function change_view() {
-    
-
     if ($("#header").hasClass("hidden")) {
-        console.log("Modo WEB ON");
         $("#header").removeClass("hidden");
         $("#previous_experience, #educacion, #dowload_pdf_button").addClass("hidden");
     } else {
-        console.log("MODO CV ON");
         $("#header").addClass("hidden");
         $("#about_me, #previous_experience, #educacion, #dowload_pdf_button").removeClass("hidden");
     }
-
-
-    //$("#about_me, #previous_experience, #educacion, #dowload_pdf_button").toggleClass("hidden");
-
 
     // Cambiar el texto del botón
     var button = $("#cv_button");
@@ -45,18 +31,6 @@ function change_view() {
         button.text("Modo CV");
     }  
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 function downloadPDF() {
     // temporal
@@ -81,4 +55,6 @@ function downloadPDF() {
         // Descarga el archivo
         pdf.save("CV_Gadi_rebolledo.pdf");
     });
+
+    $("#change_watch_mode").removeClass("hidden");
 }
