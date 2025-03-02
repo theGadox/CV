@@ -1,3 +1,9 @@
+/* Fuente general para todo el código */
+body {
+    font-family: 'Poppins', sans-serif; /* Usa una fuente limpia y moderna */
+}
+
+
 /* PRESENTACIÓN */
 #presentacion {
     background-color: #1E3A5F;
@@ -127,4 +133,15 @@
     font-size: 0.8em;
     padding: 2px 4px;
     border-radius: 4px;
+}
+
+.date-range {
+    font-style: italic !important;
+}
+
+.company-name {
+    font-weight: bold; /* Negrita */
+    font-size: 1.2em; /* Aumenta el tamaño del texto */
+    color: #D4AF37; /* Color dorado para resaltar */
+    text-transform: uppercase; /* Opcional: convierte el texto en mayúsculas */
 }
